@@ -28,7 +28,7 @@
   "scripts": {
     "start": "concurrently --kill-others-on-fail \"npm run frontend\" \"npm run backend\"",
     "frontend": "react-scripts start",
-    "backend": "nodemon server.js",
+    "backend": "node server.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
