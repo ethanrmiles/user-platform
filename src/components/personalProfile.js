@@ -60,7 +60,7 @@ const PersonalProfile = props => {
     }
 
     const postChanges = changes => {
-        axios.put(`http://localhost:3000/api/user/${ethanInfo[0]._id}`, changes)
+        axios.put(`http://localhost:3006/api/user/${ethanInfo[0]._id}`, changes)
         .then(res => {
             console.log(res)
             console.log(formValues)

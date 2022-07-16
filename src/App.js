@@ -34,7 +34,7 @@ function App() {
   const [loading, setLoading] = useState(true)
 
   const fetchUsers = async () => {
-    const res = await axios.get('http://localhost:3000/api/users')
+    const res = await axios.get('http://localhost:3006/api/users')
     const data = await res.data.users
     setUsers(data);
     setLoading(false)
