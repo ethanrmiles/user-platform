@@ -7,7 +7,6 @@ import axios from "axios";
 import FileBase64 from 'react-file-base64';
 
 
-
 const StyledPersonalProfile = styled.div`
     width: 60%;
     background-color: white;
