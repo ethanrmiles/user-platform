@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+# userPlatform- User Stories:
+• As a user I should be able to view a dashboard with your name, a profile picture and a description of yourself. <br>
+• As a user I should be able to update the following:<br>
+    • Name<br>
+    • Description of yourself<br>
+    • Profile Picture<br>
+• As a user I should be able to save the changes that I made to the above listed items<br>
+• As a user, I should be able to view the profiles of anyone that has submitted/created a profile through the app.<br>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## API ROUTES
 
-## Available Scripts
+GET /users -> Returns a list of all users from database <br>
+POST /users -> Adds a user to the database with name, description and profile picture <br>
+GET /user -> Returns a dashboard that shows self user profiles <br>
+PUT /user -> I can edit name, description or profile picture of my profile, and these changes are saved and reflected in DOM <br>
 
-In the project directory, you can run:
 
-### `npm start`
+## UI
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Upon component render, a request is made to the /users endpoint to get all users from the database. At render the data is rendered in the user cards at the bottom of the page. The data is additionally filterd looking for the name 'Ethan', in the users, to display as the top user card. If the top user card's name is edited away from 'Ethan', nothing will show in that card. If I had the time I would add a more complex and functional search functionality, that would let you select any user 'as yoursef'/ as the top card. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Did not get to: 
+I ran out of time setting up the DB to receive and store images correctly. The functionality exists and works as follows: user edits profile, and selects a file to upload. A file is recevied from the user, set into state and previewed to the user. This slice of state is then added to the other slices in the form change, and are passed to the API route PUT /user that then is ready to plug into the database. All of the functionality is there (minus some robust error handling), minus the DB support for images. 
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Reflection
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Overall I am happy with the application that I have created. If I had more time there is so much more that I would do to it including: finishing the profile picture update feature, adding better error handling, adding tests, adding a serch funcitonality, and maybe even a sign up page. Through the process I realized it had been a WHILE since I created React components, and things moved slowly at first. After referencing old projects and stack overflow, I quickly found myself in a place of ebb and flow. I was coding like a mad man, and next thing you know a few hours had passed! Even though I initially needed a refresher, and took quite too long trying to figure out how to style this application, I had a good time and reassured myself that I am a competent developer. I do not know the most languages, or have the most experience, but I have the desire to learn, grow and create, as well as the ability to perservere through and over obsticles. I appreciate your time and review in reading this file, as well as in taking a look at my project. Can't wait to hear from you!
